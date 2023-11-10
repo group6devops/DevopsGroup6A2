@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flight-service-service
+spec:
+  selector:
+    app: flight-service-app
+  ports:
+  - port: 80
+    targetPort: 9001

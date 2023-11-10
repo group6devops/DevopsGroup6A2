@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flight-service-app-metadata-name
+  labels:
+    app: flight-service-app-metadata-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flight-service-app
+  template:
+    metadata:
+      labels:
+        app: flight-service-app
+    spec:
+      containers:
+      - name: flight-service-app-container
+        image: seemapawar/flight-service:4.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9001

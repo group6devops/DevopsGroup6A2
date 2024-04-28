@@ -44,6 +44,6 @@ spec:
     spec:
       containers:
       - name: flight-service-app-container
-        image: seemapawar/flight-service:4.0
+        image: shreyas0598/flight-service:4.0
         ports:
         - containerPort: 9001

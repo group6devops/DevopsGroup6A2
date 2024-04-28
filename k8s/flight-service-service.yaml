@@ -9,3 +9,16 @@ spec:
   ports:
   - port: 80
     targetPort: 9001
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: flight-preview-service
+  namespace: default
+spec:
+  ports:
+  - protocol: TCP
+  port: 80
+  targetPort: 9001
+  selector:
+    app: flight-service-app
